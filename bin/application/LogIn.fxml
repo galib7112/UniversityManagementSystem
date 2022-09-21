@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1540" style="-fx-background-color: White;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.LogIn_Controller">
+   <right>
+      <VBox prefHeight="800.0" prefWidth="400.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER" />
+   </right>
+   <center>
+      <VBox alignment="TOP_CENTER" prefHeight="200.0" prefWidth="100.0" style="-fx-background-color: White;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER" prefHeight="209.0" prefWidth="600.0">
+               <children>
+                  <Pane prefHeight="140.0" prefWidth="400.0">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <children>
+                        <ImageView fitHeight="130.0" fitWidth="375.0" layoutX="13.0" layoutY="75.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../img/DIU-Logo.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </HBox>
+            <HBox alignment="BOTTOM_CENTER" prefHeight="54.0" prefWidth="600.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" prefHeight="18.0" prefWidth="203.0" text="Log in as">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" mouseTransparent="true" prefHeight="60.0" prefWidth="600.0" spacing="15.0">
+               <children>
+                  <CheckBox fx:id="admin" alignment="CENTER" allowIndeterminate="true" contentDisplay="CENTER" indeterminate="true" lineSpacing="5.0" mnemonicParsing="false" prefWidth="75.0" selected="true" text="Admin" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="student" alignment="CENTER" allowIndeterminate="true" contentDisplay="CENTER" disable="true" lineSpacing="5.0" mnemonicParsing="false" prefWidth="75.0" text="Student" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="employ" alignment="CENTER" allowIndeterminate="true" contentDisplay="CENTER" disable="true" lineSpacing="5.0" mnemonicParsing="false" prefWidth="75.0" text="Employ" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </CheckBox>
+                  <CheckBox fx:id="parent" alignment="CENTER" allowIndeterminate="true" contentDisplay="CENTER" disable="true" lineSpacing="5.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="75.0" text="Parent" wrapText="true">
+                     <font>
+                        <Font size="13.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="35.0" prefWidth="600.0">
+               <children>
+                  <Label fx:id="labelStatus" alignment="CENTER" contentDisplay="CENTER" prefHeight="32.0" prefWidth="300.0" textFill="RED">
+                     <font>
+                        <Font name="System Bold Italic" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <TextField fx:id="userName" prefHeight="40.0" prefWidth="285.0" promptText="User Name or ID">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="60.0" prefWidth="600.0">
+               <children>
+                  <PasswordField fx:id="textPassword" onAction="#login" onKeyPressed="#login" prefHeight="40.0" prefWidth="285.0" promptText="Password">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </PasswordField>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER" prefHeight="70.0" prefWidth="600.0" spacing="64.0">
+               <children>
+                  <Button fx:id="forgot_email_id" mnemonicParsing="false" onAction="#forgotPass" prefHeight="30.0" prefWidth="145.0" style="-fx-background-color: transparent;" text="Forgot Password?" textFill="#1a73e8">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <padding>
+                        <Insets right="26.0" />
+                     </padding>
+                  </Button>
+                  <Button fx:id="logIn" mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="80.0" style="-fx-background-color: #1a73e8;" text="Log In" textFill="WHITE">
+                     <font>
+                        <Font name="Calibri Bold" size="16.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </HBox>
+         </children></VBox>
+   </center>
+</BorderPane>

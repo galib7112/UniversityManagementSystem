@@ -1,0 +1,684 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Rectangle2D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800" prefWidth="1540" style="-fx-border-color: Black;" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.Admin_dashboard_controller">
+   <left>
+      <VBox prefHeight="678.0" prefWidth="260.0" style="-fx-background-color: #263238;" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/home.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="home" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Home" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <contextMenu>
+                        <ContextMenu>
+                           <items>
+                              <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+                           </items>
+                        </ContextMenu>
+                     </contextMenu>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Test2/src/img/academic.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="academic" mnemonicParsing="false" onAction="#AcademicAction" style="-fx-background-color: transparent;" text="Academic" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../../../Test2/src/img/student.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="student" mnemonicParsing="false" onAction="#studentButtonAction" style="-fx-background-color: transparent;" text="Student" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/money.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="finance" disable="true" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Finance" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/library.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="library" mnemonicParsing="false" onAction="#libraryButtonAction" style="-fx-background-color: transparent;" text="Library" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/eye.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="payroll" disable="true" mnemonicParsing="false" style="-fx-background-color: transparent;" text="HR/Payroll" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/messages.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="messages" disable="true" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Messages" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" disable="true" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/performance.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="performance" disable="true" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Performance" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/settings.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="settings" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Settings" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/event.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="event" mnemonicParsing="false" onAction="#EventAction" style="-fx-background-color: transparent;" text="Event" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/task.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="task" mnemonicParsing="false" onAction="#taskButtonAction" style="-fx-background-color: transparent;" text="Task Manager" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="260.0" spacing="5.0">
+               <children>
+                  <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/reports.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="report" mnemonicParsing="false" style="-fx-background-color: transparent;" text="Report" textFill="WHITE">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <padding>
+                  <Insets left="20.0" />
+               </padding>
+            </HBox>
+            <Separator prefWidth="300.0" />
+            <HBox alignment="CENTER_LEFT" prefHeight="60.0" prefWidth="300.0" spacing="5.0">
+               <children>
+                  <Button fx:id="log_out" mnemonicParsing="false" onAction="#logout" style="-fx-background-color: transparent;" text="Log Out" textFill="WHITE">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+               <padding>
+                  <Insets left="25.0" />
+               </padding>
+            </HBox>
+         </children>
+      </VBox>
+   </left>
+   <top>
+      <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1540.0" style="-fx-background-color: #fff;" BorderPane.alignment="CENTER">
+         <children>
+            <Pane prefHeight="70.0" prefWidth="260.0" style="-fx-background-color: #263238;">
+               <children>
+                  <ImageView fitHeight="60.0" fitWidth="200.0" layoutX="30.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../img/DIU-Logo.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="1280.0" style="-fx-background-color: white;">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="70.0" prefWidth="1105.0">
+                     <children>
+                        <Label fx:id="pathlbl" lineSpacing="5.0" prefHeight="40.0" prefWidth="500.0" text="Admin&gt;">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                           <padding>
+                              <Insets left="5.0" />
+                           </padding>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/homepage.png" />
+                                 </image></ImageView>
+                           </graphic>
+                        </Label>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" />
+                     </padding>
+                  </HBox>
+                  <MenuButton fx:id="userBT" alignment="CENTER_RIGHT" lineSpacing="10.0" mnemonicParsing="false" popupSide="TOP" prefHeight="30.0" prefWidth="431.0" style="-fx-background-color: transparent;" text="Md Galib Hossain">
+                    <items>
+                      <MenuItem text="Settings" />
+                      <MenuItem text="Profile" />
+                    </items>
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                           <viewport>
+                              <Rectangle2D />
+                           </viewport>
+                           <image>
+                              <Image url="@../img/boy.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </MenuButton>
+               </children>
+               <padding>
+                  <Insets right="25.0" />
+               </padding></HBox>
+         </children>
+      </HBox>
+   </top>
+   <center>
+      <VBox fx:id="mainVbox" prefHeight="200.0" prefWidth="100.0" BorderPane.alignment="CENTER">
+         <children>
+            <Separator prefWidth="200.0" />
+            <Pane prefHeight="150.0" prefWidth="1280.0">
+               <children>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="13.0" prefHeight="125.0" prefWidth="1260.0" spacing="75.0">
+                     <children>
+                        <Pane prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #ff8a65;">
+                           <children>
+                              <HBox layoutX="25.0" layoutY="15.0" prefHeight="60.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/Student%20(2).png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="St_lab" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="140.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="total_student" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: transparent;" text="TOTAL STUDENT" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children></Pane>
+                        <Pane prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #4db6ac;">
+                           <children>
+                              <HBox layoutX="25.0" layoutY="15.0" prefHeight="60.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/employ.png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="em_lab" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="140.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="total_employees" alignment="CENTER" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: transparent;" text="TOTAL EMPLOYEES" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children></Pane>
+                        <Pane prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #f06292;">
+                           <children>
+                              <HBox layoutX="25.0" layoutY="15.0" prefHeight="60.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/course.png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="co_lab" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="140.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="total_course" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: transparent;" text="TOTAL COURSE" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children></Pane>
+                        <Pane prefHeight="125.0" prefWidth="250.0" style="-fx-background-color: #9575cd;">
+                           <children>
+                              <HBox layoutX="25.0" layoutY="15.0" prefHeight="60.0" prefWidth="200.0">
+                                 <children>
+                                    <Pane prefHeight="60.0" prefWidth="60.0">
+                                       <children>
+                                          <ImageView fitHeight="60.0" fitWidth="60.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/batch.png" />
+                                             </image></ImageView>
+                                       </children>
+                                    </Pane>
+                                    <Label fx:id="ba_lab" alignment="CENTER_RIGHT" prefHeight="60.0" prefWidth="140.0" text="0" textFill="WHITE">
+                                       <font>
+                                          <Font name="System Bold" size="25.0" />
+                                       </font>
+                                       <padding>
+                                          <Insets right="10.0" />
+                                       </padding>
+                                    </Label>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="total_batch" layoutX="25.0" layoutY="75.0" mnemonicParsing="false" prefWidth="200.0" style="-fx-background-color: transparent;" text="TOTAL BATCH" textFill="WHITE">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children></Pane>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+            <Pane prefHeight="100.0" prefWidth="1280.0">
+               <children>
+                  <HBox alignment="CENTER_LEFT" layoutX="25.0" layoutY="25.0" prefHeight="50.0" prefWidth="1230.0" spacing="10.0" style="-fx-background-color: white;">
+                     <children>
+                        <Button fx:id="activity" lineSpacing="10.0" mnemonicParsing="false" onAction="#Activity" prefWidth="113.0" style="-fx-background-color: transparent;" text="Activity">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/menu.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="schedule" lineSpacing="10.0" mnemonicParsing="false" onAction="#Shedule" prefWidth="113.0" style="-fx-background-color: transparent;" text="Schedule">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/calendar.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                        <Button fx:id="fee_reports" lineSpacing="10.0" mnemonicParsing="false" onAction="#Fee_reports" prefWidth="113.0" style="-fx-background-color: transparent;" text="Fee Reports">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                           <graphic>
+                              <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../img/graph.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets left="5.0" />
+                     </padding>
+                  </HBox>
+               </children></Pane>
+            <HBox alignment="CENTER_LEFT" prefHeight="480.0" prefWidth="1280.0" spacing="15.0">
+               <padding>
+                  <Insets bottom="25.0" left="25.0" right="25.0" />
+               </padding>
+               <children>
+                  <VBox fx:id="Vbox1" alignment="TOP_CENTER" focusTraversable="true" prefHeight="200.0" prefWidth="800.0" style="-fx-background-color: white;">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="50.0" prefWidth="800.0" style="-fx-background-color: #fff;">
+                           <children>
+                              <Label fx:id="activity_lable" prefHeight="40.0" prefWidth="300.0">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <padding>
+                                    <Insets left="30.0" />
+                                 </padding>
+                              </Label>
+                              <HBox alignment="CENTER_RIGHT" prefHeight="50.0" prefWidth="500.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" prefWidth="15.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/chevron-arrow-down.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button mnemonicParsing="false" prefWidth="15.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="16.0" fitWidth="16.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/refresh.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                    <Button mnemonicParsing="false" prefWidth="15.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="14.0" fitWidth="14.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@../img/close.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                       <cursor>
+                                          <Cursor fx:constant="HAND" />
+                                       </cursor></Button>
+                                 </children>
+                                 <padding>
+                                    <Insets right="25.0" />
+                                 </padding>
+                              </HBox>
+                           </children>
+                           <opaqueInsets>
+                              <Insets />
+                           </opaqueInsets>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin></HBox>
+                        <Separator prefWidth="200.0" />
+                     </children>
+                  </VBox>
+                  <VBox alignment="TOP_CENTER" prefHeight="480.0" prefWidth="480.0" spacing="20.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="480.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #1a73e8;" text="News Feed" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ListView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                           </children>
+                        </VBox>
+                        <VBox alignment="TOP_CENTER" prefHeight="240.0" prefWidth="480.0">
+                           <children>
+                              <Label alignment="CENTER" prefHeight="50.0" prefWidth="480.0" style="-fx-background-color: #1a73e8;" text="To Do" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                              </Label>
+                              <ListView prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: white;" />
+                           </children>
+                        </VBox>
+                     </children></VBox>
+               </children>
+            </HBox>
+         </children>
+         </VBox>
+   </center>
+</BorderPane>
